@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The openssl library documentation.">
 
-    <title>openssl::crypto::hash::HashType - Rust</title>
+    <title>openssl::crypto::pkey::EncryptionPadding - Rust</title>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
           rel='stylesheet' type='text/css'>
@@ -24,7 +24,7 @@
     <section class="sidebar">
         
 
-        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>hash</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Hasher.html'>Hasher</a><br/></div><div class='block enum'><h2>Enums</h2><a class='enum current' href='enum.HashType.html'>HashType</a><br/></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.evpmd.html'>evpmd</a><br/><a class='fn ' href='fn.hash.html'>hash</a><br/></div>
+        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>pkey</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.PKey.html'>PKey</a><br/></div>
     </section>
 
     <nav class="sub">
@@ -38,17 +38,14 @@
         </form>
     </nav>
 
-    <section id='main' class="content enum">
-<h1 class='fqn'>Enum <a href='../../index.html'>openssl</a>::<a href='../index.html'>crypto</a>::<a href='index.html'>hash</a>::<a class='enum' href=''>HashType</a><a class='source' href='../../../src/openssl/crypto/hash.rs.html#5-12'>[src]</a></h1>
-<pre class='rust enum'>pub enum HashType {
-    MD5,
-    SHA1,
-    SHA224,
-    SHA256,
-    SHA384,
-    SHA512,
-}</pre><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.MD5'><code>MD5</code></td><td></td></tr><tr><td id='variant.SHA1'><code>SHA1</code></td><td></td></tr><tr><td id='variant.SHA224'><code>SHA224</code></td><td></td></tr><tr><td id='variant.SHA256'><code>SHA256</code></td><td></td></tr><tr><td id='variant.SHA384'><code>SHA384</code></td><td></td></tr><tr><td id='variant.SHA512'><code>SHA512</code></td><td></td></tr></table></section>
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../../index.html'>openssl</a>::<a href='../index.html'>crypto</a>::<a href='index.html'>pkey</a>::<a class='type' href=''>EncryptionPadding</a><a class='source' href='../../../src/openssl/crypto/pkey.rs.html#53-56'>[src]</a></h1>
+<pre class='rust enum'>pub enum EncryptionPadding {
+    OAEP,
+    PKCS1v15,
+}</pre><div class='docblock'><p>Type of encryption padding to use.</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.OAEP'><code>OAEP</code></td><td></td></tr><tr><td id='variant.PKCS1v15'><code>PKCS1v15</code></td><td></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The openssl library documentation.">
 
-    <title>openssl::crypto::pkey::EVP_PKEY - Rust</title>
+    <title>openssl::crypto::symm::Mode - Rust</title>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
           rel='stylesheet' type='text/css'>
@@ -24,7 +24,7 @@
     <section class="sidebar">
         
 
-        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>pkey</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.PKey.html'>PKey</a><br/></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.EncryptionPadding.html'>EncryptionPadding</a><br/><a class='enum ' href='enum.Role.html'>Role</a><br/></div>
+        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>symm</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Crypter.html'>Crypter</a><br/></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.decrypt.html'>decrypt</a><br/><a class='fn ' href='fn.encrypt.html'>encrypt</a><br/></div>
     </section>
 
     <nav class="sub">
@@ -38,9 +38,13 @@
         </form>
     </nav>
 
-    <section id='main' class="content typedef">
-<h1 class='fqn'><a href='../../index.html'>openssl</a>::<a href='../index.html'>crypto</a>::<a href='index.html'>pkey</a>::<a class='typedef' href=''>EVP_PKEY</a><a class='source' href='../../../src/openssl/crypto/pkey.rs.html#8'>[src]</a></h1>
-<pre class='rust typedef'>type EVP_PKEY = *c_void;</pre></section>
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../../index.html'>openssl</a>::<a href='../index.html'>crypto</a>::<a href='index.html'>symm</a>::<a class='type' href=''>Mode</a><a class='source' href='../../../src/openssl/crypto/symm.rs.html#35-38'>[src]</a></h1>
+<pre class='rust enum'>pub enum Mode {
+    Encrypt,
+    Decrypt,
+}</pre><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.Encrypt'><code>Encrypt</code></td><td></td></tr><tr><td id='variant.Decrypt'><code>Decrypt</code></td><td></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>

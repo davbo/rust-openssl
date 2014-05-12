@@ -386,12 +386,16 @@
             });
         }
 
+        function escape(content) {
+            return $('<h1/>').text(content).html();
+        }
+
         function showResults(results) {
             var output, shown, query = getQuery();
 
             currentResults = query.id;
-            output = '<h1>Results for ' + query.query +
-                    (query.type ? ' (type: ' + query.type + ')' : '') + '</h1>';
+            output = '<h1>Results for ' + escape(query.query) +
+                (query.type ? ' (type: ' + escape(query.type) + ')' : '') + '</h1>';
             output += '<table class="search-results">';
 
             if (results.length > 0) {
@@ -510,9 +514,9 @@
         // `rustdoc::html::item_type::ItemType` type in Rust.
         var itemTypes = ["mod",
                          "struct",
-                         "enum",
+                         "type",
                          "fn",
-                         "typedef",
+                         "type",
                          "static",
                          "trait",
                          "impl",
@@ -605,11 +609,10 @@
                     // cleared to ensure the search is successful.
                     currentResults = null;
                     // Synchronize search bar with query string state and
-                    // perform the search, but don't empty the bar if there's
-                    // nothing there.
-                    if (params.search !== undefined) {
-                        $('.search-input').val(params.search);
-                    }
+                    // perform the search. This will empty the bar if there's
+                    // nothing there, which lets you really go back to a
+                    // previous state with nothing in the bar.
+                    $('.search-input').val(params.search);
                     // Some browsers fire 'onpopstate' for every page load
                     // (Chrome), while others fire the event only when actually
                     // popping a state (Firefox), which is why search() is
@@ -651,4 +654,3 @@
 
     window.initSearch = initSearch;
 }());
-

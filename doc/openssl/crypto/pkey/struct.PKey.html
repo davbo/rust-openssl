@@ -24,7 +24,7 @@
     <section class="sidebar">
         
 
-        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>pkey</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.PKey.html'>PKey</a><br/></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.EncryptionPadding.html'>EncryptionPadding</a><br/><a class='enum ' href='enum.Role.html'>Role</a><br/></div>
+        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>pkey</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.PKey.html'>PKey</a><br/></div>
     </section>
 
     <nav class="sub">
@@ -57,13 +57,13 @@ load_priv().</p>
 save_priv().</p>
 </div><h4 id='method.size' class='method'><code>fn <a href='#method.size' class='fnname'>size</a>(&amp;self) -&gt; uint</code></h4>
 <div class='docblock'><p>Returns the size of the public key modulus.</p>
-</div><h4 id='method.can' class='method'><code>fn <a href='#method.can' class='fnname'>can</a>(&amp;self, r: <a class='enum' href='../../../openssl/crypto/pkey/enum.Role.html' title='openssl::crypto::pkey::Role'>Role</a>) -&gt; bool</code></h4>
+</div><h4 id='method.can' class='method'><code>fn <a href='#method.can' class='fnname'>can</a>(&amp;self, r: <a class='type' href='../../../openssl/crypto/pkey/type.Role.html' title='openssl::crypto::pkey::Role'>Role</a>) -&gt; bool</code></h4>
 <div class='docblock'><p>Returns whether this pkey object can perform the specified role.</p>
 </div><h4 id='method.max_data' class='method'><code>fn <a href='#method.max_data' class='fnname'>max_data</a>(&amp;self) -&gt; uint</code></h4>
 <div class='docblock'><p>Returns the maximum amount of data that can be encrypted by an encrypt()
 call.</p>
-</div><h4 id='method.encrypt_with_padding' class='method'><code>fn <a href='#method.encrypt_with_padding' class='fnname'>encrypt_with_padding</a>(&amp;self, s: &amp;[u8], padding: <a class='enum' href='../../../openssl/crypto/pkey/enum.EncryptionPadding.html' title='openssl::crypto::pkey::EncryptionPadding'>EncryptionPadding</a>) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
-<h4 id='method.decrypt_with_padding' class='method'><code>fn <a href='#method.decrypt_with_padding' class='fnname'>decrypt_with_padding</a>(&amp;self, s: &amp;[u8], padding: <a class='enum' href='../../../openssl/crypto/pkey/enum.EncryptionPadding.html' title='openssl::crypto::pkey::EncryptionPadding'>EncryptionPadding</a>) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
+</div><h4 id='method.encrypt_with_padding' class='method'><code>fn <a href='#method.encrypt_with_padding' class='fnname'>encrypt_with_padding</a>(&amp;self, s: &amp;[u8], padding: <a class='type' href='../../../openssl/crypto/pkey/type.EncryptionPadding.html' title='openssl::crypto::pkey::EncryptionPadding'>EncryptionPadding</a>) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
+<h4 id='method.decrypt_with_padding' class='method'><code>fn <a href='#method.decrypt_with_padding' class='fnname'>decrypt_with_padding</a>(&amp;self, s: &amp;[u8], padding: <a class='type' href='../../../openssl/crypto/pkey/type.EncryptionPadding.html' title='openssl::crypto::pkey::EncryptionPadding'>EncryptionPadding</a>) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
 <h4 id='method.encrypt' class='method'><code>fn <a href='#method.encrypt' class='fnname'>encrypt</a>(&amp;self, s: &amp;[u8]) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
 <div class='docblock'><p>Encrypts data using OAEP padding, returning the encrypted data. The
 supplied data must not be larger than max_data().</p>
@@ -75,9 +75,8 @@ can process an arbitrary amount of data; returns the signature.</p>
 </div><h4 id='method.verify' class='method'><code>fn <a href='#method.verify' class='fnname'>verify</a>(&amp;self, m: &amp;[u8], s: &amp;[u8]) -&gt; bool</code></h4>
 <div class='docblock'><p>Verifies a signature s (using OpenSSL&#39;s default scheme and sha256) on a
 message m. Returns true if the signature is valid, and false otherwise.</p>
-</div><h4 id='method.sign_with_hash' class='method'><code>fn <a href='#method.sign_with_hash' class='fnname'>sign_with_hash</a>(&amp;self, s: &amp;[u8], hash: <a class='enum' href='../../../openssl/crypto/hash/enum.HashType.html' title='openssl::crypto::hash::HashType'>HashType</a>) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
-<h4 id='method.verify_with_hash' class='method'><code>fn <a href='#method.verify_with_hash' class='fnname'>verify_with_hash</a>(&amp;self, m: &amp;[u8], s: &amp;[u8], hash: <a class='enum' href='../../../openssl/crypto/hash/enum.HashType.html' title='openssl::crypto::hash::HashType'>HashType</a>) -&gt; bool</code></h4>
-</div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='http://static.rust-lang.org/doc/master/std/ops/trait.Drop.html' title='std::ops::Drop'>Drop</a> for <a class='struct' href='../../../openssl/crypto/pkey/struct.PKey.html' title='openssl::crypto::pkey::PKey'>PKey</a></code></h3><div class='methods'><h4 id='method.drop' class='method'><code>fn <a href='#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
+</div><h4 id='method.sign_with_hash' class='method'><code>fn <a href='#method.sign_with_hash' class='fnname'>sign_with_hash</a>(&amp;self, s: &amp;[u8], hash: <a class='type' href='../../../openssl/crypto/hash/type.HashType.html' title='openssl::crypto::hash::HashType'>HashType</a>) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
+<h4 id='method.verify_with_hash' class='method'><code>fn <a href='#method.verify_with_hash' class='fnname'>verify_with_hash</a>(&amp;self, m: &amp;[u8], s: &amp;[u8], hash: <a class='type' href='../../../openssl/crypto/hash/type.HashType.html' title='openssl::crypto::hash::HashType'>HashType</a>) -&gt; bool</code></h4>
 </div></section>
     <section id='search' class="content hidden"></section>
 

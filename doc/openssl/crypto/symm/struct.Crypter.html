@@ -24,7 +24,7 @@
     <section class="sidebar">
         
 
-        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>symm</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Crypter.html'>Crypter</a><br/></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.Mode.html'>Mode</a><br/><a class='enum ' href='enum.Type.html'>Type</a><br/></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.decrypt.html'>decrypt</a><br/><a class='fn ' href='fn.encrypt.html'>encrypt</a><br/></div>
+        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>symm</a></p><div class='block struct'><h2>Structs</h2><a class='struct current' href='struct.Crypter.html'>Crypter</a><br/></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.decrypt.html'>decrypt</a><br/><a class='fn ' href='fn.encrypt.html'>encrypt</a><br/></div>
     </section>
 
     <nav class="sub">
@@ -43,19 +43,18 @@
 <pre class='rust struct'>pub struct Crypter {
     // some fields omitted
 }</pre><div class='docblock'><p>Represents a symmetric cipher context.</p>
-</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../../openssl/crypto/symm/struct.Crypter.html' title='openssl::crypto::symm::Crypter'>Crypter</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(t: <a class='enum' href='../../../openssl/crypto/symm/enum.Type.html' title='openssl::crypto::symm::Type'>Type</a>) -&gt; <a class='struct' href='../../../openssl/crypto/symm/struct.Crypter.html' title='openssl::crypto::symm::Crypter'>Crypter</a></code></h4>
+</div><h2 id='methods'>Methods</h2><h3 class='impl'><code>impl <a class='struct' href='../../../openssl/crypto/symm/struct.Crypter.html' title='openssl::crypto::symm::Crypter'>Crypter</a></code></h3><div class='methods'><h4 id='method.new' class='method'><code>fn <a href='#method.new' class='fnname'>new</a>(t: <a class='type' href='../../../openssl/crypto/symm/type.Type.html' title='openssl::crypto::symm::Type'>Type</a>) -&gt; <a class='struct' href='../../../openssl/crypto/symm/struct.Crypter.html' title='openssl::crypto::symm::Crypter'>Crypter</a></code></h4>
 <h4 id='method.pad' class='method'><code>fn <a href='#method.pad' class='fnname'>pad</a>(&amp;self, padding: bool)</code></h4>
 <div class='docblock'><p>Enables or disables padding. If padding is disabled, total amount of
 data encrypted must be a multiple of block size.</p>
-</div><h4 id='method.init' class='method'><code>fn <a href='#method.init' class='fnname'>init</a>(&amp;self, mode: <a class='enum' href='../../../openssl/crypto/symm/enum.Mode.html' title='openssl::crypto::symm::Mode'>Mode</a>, key: &amp;[u8], iv: &amp;[u8])</code></h4>
+</div><h4 id='method.init' class='method'><code>fn <a href='#method.init' class='fnname'>init</a>(&amp;self, mode: <a class='type' href='../../../openssl/crypto/symm/type.Mode.html' title='openssl::crypto::symm::Mode'>Mode</a>, key: &amp;[u8], iv: &amp;[u8])</code></h4>
 <div class='docblock'><p>Initializes this crypter.</p>
 </div><h4 id='method.update' class='method'><code>fn <a href='#method.update' class='fnname'>update</a>(&amp;self, data: &amp;[u8]) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
 <div class='docblock'><p>Update this crypter with more data to encrypt or decrypt. Returns
 encrypted or decrypted bytes.</p>
 </div><h4 id='method.final' class='method'><code>fn <a href='#method.final' class='fnname'>final</a>(&amp;self) -&gt; <a class='struct' href='http://static.rust-lang.org/doc/master/std/vec/struct.Vec.html' title='std::vec::Vec'>Vec</a>&lt;u8&gt;</code></h4>
 <div class='docblock'><p>Finish crypting. Returns the remaining partial block of output, if any.</p>
-</div></div><h2 id='implementations'>Trait Implementations</h2><h3 class='impl'><code>impl <a class='trait' href='http://static.rust-lang.org/doc/master/std/ops/trait.Drop.html' title='std::ops::Drop'>Drop</a> for <a class='struct' href='../../../openssl/crypto/symm/struct.Crypter.html' title='openssl::crypto::symm::Crypter'>Crypter</a></code></h3><div class='methods'><h4 id='method.drop' class='method'><code>fn <a href='#method.drop' class='fnname'>drop</a>(&amp;mut self)</code></h4>
-</div></section>
+</div></div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>

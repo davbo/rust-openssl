@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The openssl library documentation.">
 
-    <title>openssl::ssl::SslMethod - Rust</title>
+    <title>openssl::ssl::VerifyCallback - Rust</title>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
           rel='stylesheet' type='text/css'>
@@ -24,7 +24,7 @@
     <section class="sidebar">
         
 
-        <p class='location'><a href='../index.html'>openssl</a>&#8203;::<a href='index.html'>ssl</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='error/index.html'>error</a><br/></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.SslContext.html'>SslContext</a><br/><a class='struct ' href='struct.SslStream.html'>SslStream</a><br/><a class='struct ' href='struct.X509.html'>X509</a><br/><a class='struct ' href='struct.X509Name.html'>X509Name</a><br/><a class='struct ' href='struct.X509StoreContext.html'>X509StoreContext</a><br/></div><div class='block enum'><h2>Enums</h2><a class='enum current' href='enum.SslMethod.html'>SslMethod</a><br/><a class='enum ' href='enum.SslVerifyMode.html'>SslVerifyMode</a><br/><a class='enum ' href='enum.X509NameFormat.html'>X509NameFormat</a><br/><a class='enum ' href='enum.X509ValidationError.html'>X509ValidationError</a><br/></div>
+        <p class='location'><a href='../index.html'>openssl</a>&#8203;::<a href='index.html'>ssl</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='error/index.html'>error</a><br/></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.SslContext.html'>SslContext</a><br/><a class='struct ' href='struct.SslStream.html'>SslStream</a><br/><a class='struct ' href='struct.X509.html'>X509</a><br/><a class='struct ' href='struct.X509Name.html'>X509Name</a><br/><a class='struct ' href='struct.X509StoreContext.html'>X509StoreContext</a><br/></div>
     </section>
 
     <nav class="sub">
@@ -38,18 +38,10 @@
         </form>
     </nav>
 
-    <section id='main' class="content enum">
-<h1 class='fqn'>Enum <a href='../index.html'>openssl</a>::<a href='index.html'>ssl</a>::<a class='enum' href=''>SslMethod</a><a class='source' href='../../src/openssl/ssl/mod.rs.html#48-58'>[src]</a></h1>
-<pre class='rust enum'>pub enum SslMethod {
-    Sslv3,
-    Tlsv1,
-    Sslv23,
-}</pre><div class='docblock'><p>Determines the SSL method supported</p>
-</div><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.Sslv3'><code>Sslv3</code></td><td><div class='docblock'><p>Only support the SSLv3 protocol</p>
-</div></td></tr><tr><td id='variant.Tlsv1'><code>Tlsv1</code></td><td><div class='docblock'><p>Only support the TLSv1 protocol</p>
-</div></td></tr><tr><td id='variant.Sslv23'><code>Sslv23</code></td><td><div class='docblock'><p>Support the SSLv2, SSLv3 and TLSv1 protocols</p>
-</div></td></tr></table></section>
+    <section id='main' class="content type">
+<h1 class='fqn'><a href='../index.html'>openssl</a>::<a href='index.html'>ssl</a>::<a class='type' href=''>VerifyCallback</a><a class='source' href='../../src/openssl/ssl/mod.rs.html#112-113'>[src]</a></h1>
+<pre class='rust typedef'>type VerifyCallback = fn(preverify_ok: bool, x509_ctx: &amp;<a class='struct' href='../../openssl/ssl/struct.X509StoreContext.html' title='openssl::ssl::X509StoreContext'>X509StoreContext</a>) -&gt; bool;</pre><div class='docblock'><p>The signature of functions that can be used to manually verify certificates</p>
+</div></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>

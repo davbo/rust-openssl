@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The openssl library documentation.">
 
-    <title>openssl::crypto::symm::Type - Rust</title>
+    <title>openssl::ssl::SslVerifyMode - Rust</title>
 
     <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:400,600'
           rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="../../../main.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
 
     
 </head>
@@ -24,7 +24,7 @@
     <section class="sidebar">
         
 
-        <p class='location'><a href='../../index.html'>openssl</a>&#8203;::<a href='../index.html'>crypto</a>&#8203;::<a href='index.html'>symm</a></p><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.Crypter.html'>Crypter</a><br/></div><div class='block enum'><h2>Enums</h2><a class='enum ' href='enum.Mode.html'>Mode</a><br/><a class='enum current' href='enum.Type.html'>Type</a><br/></div><div class='block fn'><h2>Functions</h2><a class='fn ' href='fn.decrypt.html'>decrypt</a><br/><a class='fn ' href='fn.encrypt.html'>encrypt</a><br/></div>
+        <p class='location'><a href='../index.html'>openssl</a>&#8203;::<a href='index.html'>ssl</a></p><div class='block mod'><h2>Modules</h2><a class='mod ' href='error/index.html'>error</a><br/></div><div class='block struct'><h2>Structs</h2><a class='struct ' href='struct.SslContext.html'>SslContext</a><br/><a class='struct ' href='struct.SslStream.html'>SslStream</a><br/><a class='struct ' href='struct.X509.html'>X509</a><br/><a class='struct ' href='struct.X509Name.html'>X509Name</a><br/><a class='struct ' href='struct.X509StoreContext.html'>X509StoreContext</a><br/></div>
     </section>
 
     <nav class="sub">
@@ -38,16 +38,16 @@
         </form>
     </nav>
 
-    <section id='main' class="content enum">
-<h1 class='fqn'>Enum <a href='../../index.html'>openssl</a>::<a href='../index.html'>crypto</a>::<a href='index.html'>symm</a>::<a class='enum' href=''>Type</a><a class='source' href='../../../src/openssl/crypto/symm.rs.html#41-53'>[src]</a></h1>
-<pre class='rust enum'>pub enum Type {
-    AES_128_ECB,
-    AES_128_CBC,
-    AES_256_ECB,
-    AES_256_CBC,
-    RC4_128,
-}</pre><h2 class='variants'>Variants</h2>
-<table><tr><td id='variant.AES_128_ECB'><code>AES_128_ECB</code></td><td></td></tr><tr><td id='variant.AES_128_CBC'><code>AES_128_CBC</code></td><td></td></tr><tr><td id='variant.AES_256_ECB'><code>AES_256_ECB</code></td><td></td></tr><tr><td id='variant.AES_256_CBC'><code>AES_256_CBC</code></td><td></td></tr><tr><td id='variant.RC4_128'><code>RC4_128</code></td><td></td></tr></table></section>
+    <section id='main' class="content type">
+<h1 class='fqn'>Enum <a href='../index.html'>openssl</a>::<a href='index.html'>ssl</a>::<a class='type' href=''>SslVerifyMode</a><a class='source' href='../../src/openssl/ssl/mod.rs.html#73-78'>[src]</a></h1>
+<pre class='rust enum'>pub enum SslVerifyMode {
+    SslVerifyPeer,
+    SslVerifyNone,
+}</pre><div class='docblock'><p>Determines the type of certificate verification used</p>
+</div><h2 class='variants'>Variants</h2>
+<table><tr><td id='variant.SslVerifyPeer'><code>SslVerifyPeer</code></td><td><div class='docblock'><p>Verify that the server&#39;s certificate is trusted</p>
+</div></td></tr><tr><td id='variant.SslVerifyNone'><code>SslVerifyNone</code></td><td><div class='docblock'><p>Do not verify the server&#39;s certificate</p>
+</div></td></tr></table></section>
     <section id='search' class="content hidden"></section>
 
     <section class="footer"></section>
@@ -84,11 +84,11 @@
     </div>
 
     <script>
-        var rootPath = "../../../";
+        var rootPath = "../../";
         var currentCrate = "openssl";
     </script>
-    <script src="../../../jquery.js"></script>
-    <script src="../../../main.js"></script>
-    <script async src="../../../search-index.js"></script>
+    <script src="../../jquery.js"></script>
+    <script src="../../main.js"></script>
+    <script async src="../../search-index.js"></script>
 </body>
 </html>
